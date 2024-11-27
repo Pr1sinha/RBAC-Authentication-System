@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink, Navigate } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 
 const App = () => {
+  const isAuthenticated = !!localStorage.getItem('authToken'); // Check if token exists
+
   return (
     <Router>
       <div>
@@ -12,17 +14,17 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/register" activeClassName="active">
+              <NavLink to="/register" activeclassName="active">
                 Register
               </NavLink>
             </li>
             <li>
-              <NavLink to="/login" activeClassName="active">
+              <NavLink to="/login" activeclassName="active">
                 Login
               </NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard" activeClassName="active">
+              <NavLink to="/dashboard" activeclassName="active">
                 Dashboard
               </NavLink>
             </li>
@@ -33,7 +35,8 @@ const App = () => {
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* Redirect to login if not authenticated */}
+          <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
         </Routes>
       </div>
     </Router>
