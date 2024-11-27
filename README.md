@@ -41,7 +41,7 @@ This project implements an authentication and authorization system with Role-Bas
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/RBAC-Authentication-System.git
+   git clone https://github.com/Pr1sinha/RBAC-Authentication-System.git
 2. Navigate to the project directory:
    ```bash
    cd RBAC-Authentication-System
