@@ -37,7 +37,7 @@ This project implements an authentication and authorization system with Role-Bas
   ```json
   "Welcome User"
 
-## Installation:
+## Installation Instructions:
 
 ## Backend Set up: 
 
@@ -60,6 +60,8 @@ This project implements an authentication and authorization system with Role-Bas
 5. Start the backend server:
    ```bash
    node server.js
+The backend server will start at http://localhost:5000.
+
 ## Frontend Set up: 
 1. Navigate to the frontend directory:
    ```bash
@@ -70,7 +72,8 @@ This project implements an authentication and authorization system with Role-Bas
 3. Start the development server:
    ```bash
    npm start
-4. Open http://localhost:3000 in your browser.
+The frontend server will start at http://localhost:3000.
+4. Open http://localhost:3000 in your browser to access the application.
 
 ## Role-Based Access Details:
 - Admin: Access to /api/roles/admin, /api/roles/moderator, and /api/roles/user.
