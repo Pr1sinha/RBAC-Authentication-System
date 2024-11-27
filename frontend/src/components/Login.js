@@ -9,7 +9,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -17,6 +17,8 @@ const Login = () => {
       const data = await response.json();
       if (response.ok) {
         setMessage(`Login successful! Token: ${data.token}`);
+        // Save token to localStorage (optional)
+        localStorage.setItem('authToken', data.token);
       } else {
         setMessage(data.message || 'Login failed');
       }
