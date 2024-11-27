@@ -72,7 +72,7 @@ The backend server will start at http://localhost:5000.
 3. Start the development server:
    ```bash
    npm start
-The frontend server will start at http://localhost:3000.
+  The frontend server will start at http://localhost:3000.
 4. Open http://localhost:3000 in your browser to access the application.
 
 ## Role-Based Access Details:
