@@ -56,7 +56,12 @@ This project implements an authentication and authorization system with Role-Bas
 5. Start the server:
    ```bash
    node server.js
-   
+
+## Role-Based Access Details:
+- Admin: Access to /api/roles/admin, /api/roles/moderator, and /api/roles/user.
+- Moderator: Access to /api/roles/moderator and /api/roles/user.
+- User: Access to /api/roles/user.
+
 ## License:
 This project is licensed under the MIT License.
 
