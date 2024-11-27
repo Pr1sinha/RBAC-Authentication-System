@@ -84,7 +84,12 @@ app.post('/api/auth/register', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-
+// Log out route (Optional for JWT-based Auth)
+app.post('/api/auth/logout', (req, res) => {
+  // Since we're using JWT, there's no session to destroy.
+  // Invalidate the token client-side by removing it.
+  res.json({ message: 'Logged out successfully' });
+});
 
 // Start the server
 const PORT = process.env.PORT || 5000;
