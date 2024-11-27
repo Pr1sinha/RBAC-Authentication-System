@@ -39,23 +39,38 @@ This project implements an authentication and authorization system with Role-Bas
 
 ## Installation:
 
+## Backend Set up: 
+
 1. Clone this repository:
    ```bash
    git clone https://github.com/Pr1sinha/RBAC-Authentication-System.git
-2. Navigate to the project directory:
+2. Navigate to the project's backend directory:
    ```bash
-   cd RBAC-Authentication-System
+   cd RBAC-Authentication-System/backend
 3. Install the dependencies:
     ```bash
     npm install
-4. Create a .env file in the root of the project and add the following environment variables:
+4. Set up MongoDB:
+- Install MongoDB and run it locally or use a cloud-hosted MongoDB URI.
+- Add a .env file in the backend root:
    ```makefile
    PORT=5000
    MONGO_URI=mongodb://127.0.0.1:27017/rbac_db
    JWT_SECRET=mySuperSecretKey
-5. Start the server:
+5. Start the backend server:
    ```bash
    node server.js
+## Frontend Set up: 
+1. Navigate to the frontend directory:
+   ```bash
+   cd ../frontend
+2. Install dependencies:
+   ```bash
+   npm install
+3. Start the development server:
+   ```bash
+   npm start
+4. Open http://localhost:3000 in your browser.
 
 ## Role-Based Access Details:
 - Admin: Access to /api/roles/admin, /api/roles/moderator, and /api/roles/user.
