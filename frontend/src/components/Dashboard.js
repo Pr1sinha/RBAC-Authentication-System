@@ -1,15 +1,14 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Ensure you import 'Link' and 'useNavigate'
 
 const Dashboard = () => {
-  const authToken = localStorage.getItem('authToken');
-  
-  if (!authToken) {
-    return <Navigate to="/login" />; // Redirect to login if no token
-  }
+  const navigate = useNavigate();  // Correct usage of 'useNavigate'
 
+  // Handle Logout
   const handleLogout = () => {
+    // Remove token from localStorage
     localStorage.removeItem('authToken');
+    // Redirect user to login page
     navigate('/login');
   };
 
@@ -17,7 +16,11 @@ const Dashboard = () => {
     <div>
       <h2>Dashboard</h2>
       <p>Welcome to the RBAC Dashboard! This area is protected and requires appropriate role access.</p>
+      
+      {/* Logout Button */}
       <button onClick={handleLogout}>Logout</button>
+
+      {/* Link to login page */}
       <p>Need to login again? <Link to="/login">Login</Link></p>
     </div>
   );
