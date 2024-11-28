@@ -63,16 +63,20 @@ This project implements an authentication and authorization system with Role-Bas
 The backend server will start at http://localhost:5000.
 
 ## Frontend Set up: 
-1. Navigate to the frontend directory:
+1. Deploy the Frontend:
+The frontend is already deployed and hosted on Netlify. You can access the live application at:
+https://rbac99ui.netlify.app/dashboard
+2. Development (Optional): If you'd like to run the frontend locally for development:
+- Navigate to the frontend directory:
    ```bash
    cd ../frontend
-2. Install dependencies:
+- Install dependencies:
    ```bash
    npm install
-3. Start the development server:
+- Start the development server:
    ```bash
    npm start
-  The frontend server will start at http://localhost:3000. You can open it in your browser to access the application.
+ The frontend server will start at http://localhost:3000. You can open it in your browser to access the application.
 
 ## Role-Based Access Details:
 - Admin: Access to /api/roles/admin, /api/roles/moderator, and /api/roles/user.
