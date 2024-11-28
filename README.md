@@ -65,7 +65,8 @@ The backend server will start at http://localhost:5000.
 ## Frontend Set up: 
 1. Deploy the Frontend:
 The frontend is already deployed and hosted on Netlify. You can access the live application at:
-https://rbac99ui.netlify.app/dashboard
+https://rbac99ui.netlify.app/
+
 2. Development (Optional): If you'd like to run the frontend locally for development:
 - Navigate to the frontend directory:
    ```bash
